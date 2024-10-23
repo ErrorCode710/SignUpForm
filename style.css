@@ -1,0 +1,129 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  /* Background Colors */
+  --background-color: #0b0c10; /* Cosmic Black */
+  --secondary-background-color: #1b1e23; /* Midnight Blue */
+
+  /* Accent Colors */
+  --highlight-color: #2be3e7; /* Electric Blue */
+  --accent-color: #8a2be2; /* Neon Violet */
+  --secondary-accent-color: #ff4e86; /* Neon Pink */
+
+  /* Text Colors */
+  --primary-text-color: #e5e5e5; /* Soft White */
+  --secondary-text-color: #6b6e70; /* Muted Gray */
+
+  /* Button Colors */
+  --button-gradient-start: #1f2833; /* Dark Gradient Start */
+  --button-gradient-end: #66fcf1; /* Bright Gradient End */
+
+  /* Input Field Colors */
+  --input-background-color: #1b1e23; /* Midnight Blue */
+  --input-border-color: #2be3e7; /* Electric Blue */
+  --input-placeholder-color: #6b6e70; /* Muted Gray */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+main {
+  display: grid;
+  /* place-content: center; */
+  /* min-height: 100svh; */
+}
+.hero-container img {
+  max-width: 100%;
+  /* max-height: 100vh; */
+}
+/* .form__container {
+  margin-top: 5rem;
+  position: sticky;
+  border: red 1px solid;
+  padding: 1rem;
+  z-index: 9999;
+} */
+.form__elements {
+  margin-top: 5rem;
+  top: 1rem;
+  position: sticky;
+  padding: 1rem;
+  z-index: 9999;
+}
+.container {
+  display: grid;
+  grid-template-columns: 35% 60%;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
